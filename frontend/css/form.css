@@ -1,0 +1,277 @@
+*{
+    box-sizing: border-box;
+}
+
+form{
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    width: 50%;
+    border-radius: 2%;
+    border: 2px solid black;
+    background-color: #DEDEDE;
+    animation: zoom 1s;
+}
+#form2{
+    animation: left 1s;
+}
+
+label{
+    color:#2F2D38; 
+    font-size: 30px;
+    font-family: Helvetica, sans-serif;
+}
+
+form input[type=email],form input[type=password],form input[type=text],form input[type=date],select{
+    margin-bottom: 15px;
+    width: 100%;
+    font-size: 25px;
+    padding: 10px;
+    background-color: rgb(235, 235, 235);
+    border-radius: 40px;
+    
+}
+/*mot de passe oublié*/
+.div1{
+    font-size: 25px;
+    text-align: right;
+    text-decoration: underline;
+    color: blue;
+}
+/* ou*/
+.div2{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: black;
+}
+
+.sexe{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    color: black;
+}
+
+hr{
+    border: 1px solid grey,
+}
+form input[type=submit], form input[type=reset]{
+    width: 48%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 25px;
+    padding: 5px;
+    background-color: rgb(160, 167, 160);
+    color: rgb(32, 30, 30);
+    border: none;
+    border-radius: 0px;
+}
+
+#dev{
+    display: none;
+}
+
+form #button1{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    float: right;
+    border: none;
+    width: 48%;
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    background-color: rgb(160, 167, 160);
+    border-radius: 0px; 
+}
+/*ci-dessous la balise a (s'inscrire)*/ 
+#button1 a{
+    text-decoration: none;
+    color: rgb(32, 30, 30);
+}
+
+form input[type=button]{
+    width: 100%;
+    padding: 10px;
+    font-size: 25px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+#form2{
+    text-align: left;
+    margin-top: 30px;
+    margin-left: 1%;
+    padding: 15px;
+    width: 70%;
+}
+#radio{
+    margin-left: 2%;
+}
+.sided{
+    margin-top: 30px;
+    width: 28%;
+    float: right;
+    animation: zoom 1s;
+}
+
+.side{
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.side01{
+    padding-bottom: 5px;
+    font-size: 30px;
+    color: teal;
+    background-color:red;
+    width: 100%;
+}
+
+.side02{
+    padding-top: 10px;
+    padding-bottom: 5px;
+    font-size: 25px;
+    background-color: darkslategrey;
+    color: white;
+}
+
+@media screen and (max-width:1200px){
+    label{
+        font-size: 18px;
+    }
+    form{
+        width: 96%;
+        margin: 0;
+        margin-top: 18px;
+        margin-left: 2%;
+    }
+    #radio{
+        font-size: 15px;
+    }
+    form input[type=email],form input[type=password],form input[type=text],form input[type=text],form input[type=date],select{
+        font-size: 15px;
+        padding: 5px;
+    }
+    .div1,.div2,.sexe{
+        font-size: 15px;
+    }
+    hr{
+        border-width: 0.5px;
+    }
+    form input[type=submit],form input[type=reset]{
+        font-size: 15px;
+    }
+    form #button1{
+        font-size: 15px;
+    }
+    form input[type=button]{
+        font-size: 15px;
+        margin: 0;
+        margin-bottom: 5px;
+    }
+    .sided{
+        margin: auto;
+        padding: 2%;
+        width: 100%;
+        float: none;
+        clear: right;
+    }
+    .side{
+        margin-bottom: 5px;
+        border-radius: 4px;
+    }
+    .side01{
+        font-size: 20px;
+    }
+    .side02{
+        font-size: 15px;
+    }
+    #form2{
+        margin: 0;
+        margin-left: 2%;
+        width: 96%;
+    }
+}
+
+
+@keyframes zoom{
+    from {
+        transform: scale(0);
+    }
+}
+@keyframes down{
+    from {
+        transform: translateY(200px);
+    }
+}
+@keyframes trans{
+    from {
+        opacity: 0;
+    }
+}
+@keyframes left{
+    from {
+        transform: translateX(-200px);
+    }
+}
+@media screen and (min-width: 2600px){
+    label{
+        font-size: 35px;
+    }
+    form input[type=email],form input[type=password],form input[type=text],form input[type=text],form input[type=date],select{
+        font-size: 35px;
+        padding: 20px;
+    }
+    .div1,.div2,.sexe{
+        font-size: 35px;
+    }
+    hr{
+        border-width: 0.5px;
+    }
+    form{
+        margin-left: 5%;
+        width: 45%;
+    }
+    form input[type=submit],form input[type=reset]{
+        font-size: 35px;
+    }
+    form #button1{
+        font-size: 35px;
+    }
+    form input[type=button]{
+        font-size: 35px;
+        margin: 0;
+        margin-bottom: 25px;
+    }
+    #form2 {
+        width: 50%;
+        padding: 25px;
+        margin-left: 5%;
+    }
+    .sided{
+        width: 40%;
+    }
+    .side{
+        width: 40%;
+        float: left;
+        margin-right: 2%;
+    }
+    .side02 {
+        padding: 15px;
+    }
+    #dev{
+        display: block;
+        width: 25%;
+        float: right;
+        margin-top: 30px;
+        margin-right: 10%;
+    }
+}

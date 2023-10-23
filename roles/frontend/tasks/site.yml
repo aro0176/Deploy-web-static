@@ -1,0 +1,47 @@
+---
+
+ - name: Création dossier
+   file:
+     path: /var/www/frontend
+     state: directory
+     owner: "{{ user }}"
+     group: "{{ user }}"
+     mode: 0775
+
+ - name: Copy HTML et CSS files
+   copy:
+     src: "{{ path/ to / directory / app}}"
+    # dest: /var/www/html/
+     dest: /var/www/frontend/
+   notify: Restart Web
+
+# - name: Copier Private key SSL
+#   copy:
+#     src: /home/ansible/test/ssl/apache-self.key
+#     dest: /etc/ssl/private/
+#   notify: Restart Web
+
+# - name: Copier Certificat key SSL
+#   copy:
+#      src: /home/ansible/test/ssl/apache-self.crt
+#      dest: /etc/ssl/certs/
+#   notify: Restart Web
+
+# - name: Activer le site web avec SSL
+#   apache2_module:
+#     state: present
+#     name: ssl
+#   notify: Restart Web
+
+ - name: Copier le fichier de configuration vhost
+   template:
+     src: /home/ansible/test/roles/frontend/templates/vhost.conf.j2
+     dest: /etc/apache2/sites-available/demo.conf
+
+ - name: Activer le site
+   command: a2ensite demo.conf
+   args:
+     warn: no
+   notify: Restart Web
+...
+                        

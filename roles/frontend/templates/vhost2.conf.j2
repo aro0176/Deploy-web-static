@@ -1,0 +1,8 @@
+<VirtualHost *:443>
+    ServerAdmin client@web.apmf.com
+    ServerName www.web.local
+    DocumentRoot /var/www/html/
+    SSLEngine on
+    SSLCertificateFile /etc/ssl/certs/monsite.crt
+    SSLCertificateKeyFile /etc/ssl/private/monsite.key
+</VirtualHost>

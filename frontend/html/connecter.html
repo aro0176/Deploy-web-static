@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/monstyle.css">
+    <link rel="stylesheet" href="../css/form.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <title>Se connecter</title>
+</head>
+<body>
+    <nav>
+        <a href="../index.html">Accueil</a>
+        <a href="romance.html">Romance</a>
+        <a href="horreur.html">Horreur</a>
+        <a href="action.html">Action</a>
+        <a href="scienceFiction.html">Science-Fiction</a>
+        <a id="active" href="" style="float:right;">Se connecter</a>  
+      </nav>
+      
+      <form method="POST" action="">
+        <label for="mail">Adresse email</label>
+            <input type="email" name="email" id="mail" placeholder="Entrez votre Email" required>
+        <label for="pass">Mot de passe</label>
+            <input type="password" name="password" id="pass" placeholder="Entrez votre mot de passe" required>
+        <div class="div1">
+            <p>Mot de passe oublié?</p>
+        </div>
+        <input type="submit" value="Se connecter">
+        <div id="button1"><a href="compte.html">S'inscrire</a></div>
+        <hr>
+        <div class="div2">
+            <p>Ou</p>
+        </div>
+        <hr>
+        <input style="background-color: #3B5998;color: white" type="button" value="Se connecter avec Facebook">
+        <input style="background-color:#dd4b39;color: white" type="button" value="Se connecter avec Google">
+        <input style="background-color:#55ACEE;color: white" type="button" value="Se connecter avec Twitter">
+      </form>
+    
+</body>
+</html>

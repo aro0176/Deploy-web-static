@@ -1,0 +1,26 @@
+---
+ - name: Création dossier
+   file:
+     path: /var/www/fronten
+     state: directory
+     owner: "{{ user }}"
+     group: "{{ user }}"
+     mode: 0775
+
+ - name: Copy HTML et CSS files
+   copy:
+     src: "{{ path / to / directory / app }}"
+     dest: /var/www/fronten/
+   notify: Restart Web
+
+ - name: Copier le fichier de configuration vhost
+   template:
+     src: /home/ansible/test/roles/fronten/templates/virhost.conf.j2
+     dest: /etc/apache2/sites-available/test.conf
+
+ - name: Activer le site
+   command: a2ensite test.conf
+   args:
+     warn: no
+   notify: Restart Web
+...

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/monstyle.css">
+    <link rel="stylesheet" href="../css/form.css">
+    <title>Creer un compte</title>
+</head>
+<body>
+    <nav>
+        <a href="../index.html">Accueil</a>
+        <a href="romance.html">Romance</a>
+        <a href="horreur.html">Horreur</a>
+        <a href="action.html"> Action</a>
+        <a href="scienceFiction.html">Science-fiction</a>
+        <a id="active" href="connecter.html" style="float:right;">Se connecter</a>  
+      </nav>
+      <div class="sided">
+        <article class="side">
+          <div class="side01"><b>Compte Premium</b></div>
+          <div class="side02">Profiter de tous les films en illimite et en HD en achetant un compte Premium <br>
+          Pour seulement 5&euro;/mois avec Telechargement</div>
+      </article>
+      <article class="side">
+          <div class="side01"><b>Compte Gratuit</b></div>
+          <div class="side02">Vous pouvez regarder des films en qualite SD pendant un mois gratuitement
+              sans telechargement et avec des pubs
+          </div>
+      </article>
+      </div>
+      <form id="form2" method="POST" action="">
+        <div><label for="nom">Nom</label></div>
+            <input type="text" name="nom" id="nom" placeholder="Entrez votre Nom" required>
+        <div><label for="prenoms">Prenom(s)</label></div>
+            <input type="text" name="prenoms" id="prenoms" placeholder="Entrer votre prenom" required>
+        <div><label for="anniv">Votre date de naissance</label></div>
+            <input type="date" name="anniversaire" id="anniv">
+        <div><label for="villes">Votre Ville</label></div>
+        <select name="villes" id="villes">
+            <option value="Tananarive">Antananarivo</option>
+            <option value="Diego">Antsiranana</option>
+            <option value="Fianarantsoa">Fianarantsoa</option>
+            <option value="Majunga">Mahajanga</option>
+            <option value="Toamasina">Toamasina</option>
+            <option value="Tulear">Toliara</option>
+        </select>
+        <br>
+        <br>
+        <hr>
+        <div class="sexe">Votre Sexe</div>
+        <label id="radio" for="homme">Homme</label>
+            <input type="radio" name="sexe" value="homme" id="homme"><br>
+        <label id="radio" for="femme">Femme</label>
+            <input type="radio" name="sexe" value="femme" id="femme"><br><hr>
+        <br>
+        <div><label for="mail">Adresse email</label></div>
+            <input type="email" name="email" id="mail" placeholder="Entrez votre Email" required>
+        <div><label for="pass">Mot de passe</label></div>
+            <input type="password" name="password" id="pass" placeholder="Entrer votre mot de passe" required>
+        <div><label for="passconf">Confirmer mot de passe</label></div>
+            <input type="password" name="passwordc" id="passconf" placeholder="Confirmer votre mot de passe" required>
+        <input type="submit" value="Creer">
+        <input type="reset" value="Reinitialiser" style="float: right;">
+      </form>
+</body>
+</html>

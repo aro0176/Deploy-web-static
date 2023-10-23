@@ -1,0 +1,9 @@
+---
+ - name: Deploy HTML Web App
+   hosts: ServerWeb
+   remote_user: "{{ user }}"
+   become: yes
+   roles:
+     - frontend
+     - frontend2
+...

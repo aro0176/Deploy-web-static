@@ -1,0 +1,6 @@
+---
+ - name: Restart Web
+   service:
+     name: apache2 
+     state: reloaded
+...
