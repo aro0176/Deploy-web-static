@@ -9,7 +9,7 @@
 
  - name: Copy HTML et CSS files
    copy:
-     src: "{{ path / to / directory / app }}"
+     src: "{{ path / to / directory /site}}"
      dest: /var/www/fronten/
    notify: Restart Web
 
